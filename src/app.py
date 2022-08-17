@@ -27,9 +27,12 @@ def result(country, variety, aroma, aftertaste, acidity, body, balance, moisture
     # salida a mostrar
     text_result = result.tolist()[0]
     if text_result == 'Yes':
-        return jsonify(message = 'Sí es un café de especialidad'), 200 # 200 es el código de error
+        return jsonify(message = 'Si es un cafe de especialidad'), 200 # 200 es el código de error
     else:
-        return jsonify(message = 'No es un café de especialidad'), 200
+        return jsonify(message = 'No es un cafe de especialidad'), 200
 
 if __name__ == '__main__':
     app.run(debug = True, host = '127.0.0.1', port = 5000)
+
+    ## prueba para si: Guatemala/Bourbon/7.83/7.67/7.33/7.67/7.67/0.11
+    ## prueba para no: Other/Other/7.25/6.83/7.17/7.00/7.17/0.11
